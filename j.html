@@ -1,0 +1,15 @@
+var demo = angular.module("demo", []);
+
+function DemoController($scope)
+{
+  $scope.items = [ ];
+
+  $scope.addItem = function(item){
+    $scope.items.push(item);
+    $scope.newItem = null;
+  }
+
+  $scope.removeItem = function(index){
+    $scope.items.splice(index, 1);
+  }
+}
